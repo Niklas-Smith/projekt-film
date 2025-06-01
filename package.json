@@ -1,0 +1,19 @@
+{
+  "name": "automatisering-publicering",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel --open chrome",
+    "build": "parcel build"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "jsdoc": "^4.0.4",
+    "parcel": "^2.13.3",
+    "sharp": "^0.33.5"
+  }
+}
