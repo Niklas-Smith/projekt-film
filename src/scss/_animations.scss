@@ -1,2 +1,8 @@
 @use "component";
 
+.posterImg:hover {
+animation-name: scaleImg;
+animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+
+}

@@ -4,25 +4,31 @@
    padding: 0;
   font-family: component.$font-Family;
   line-height: 1.5em;
-max-width: 1900px;
-margin-left: auto;
-margin-right: auto;
+
+
 }
 
+body{
 
+  background-color: component.$backround_color;
+  max-width: 1900px;
+  margin: auto;
+}
 
 header {
  background-color: component.$darkBrown;
- align-items: center;
 height: 7em;    
 display: flex;
-
+align-items: center;
+ justify-content: space-between;
 }
 
 h1{
 color: component.$orange;
 font-size: 2.5em;
-margin: auto;
+
+  text-shadow: 3px 2px component.$lightred;
+
 }
 
 
@@ -30,7 +36,47 @@ margin: auto;
 .scroller{
 display: flex;
 overflow-x: auto;
-gap: 1em;
 
 }
     
+.posterImg{
+padding: 1.5em;
+background-color: component.$lightred;
+margin-top: 1em;
+}
+
+ul {
+
+    list-style-type: none;
+}
+
+ul li a {
+font-size: 2em;
+color: component.$orange;
+text-decoration:none;
+
+}
+nav a {
+
+  text-decoration: none;
+}
+.credit{
+font-size: 1.5em;
+margin-top: 2em;
+margin-left: 2em;
+
+}
+
+.p_credit{
+
+  font-size: 1.5em;
+  margin-left: 2em;
+}
+
+.tmdb_log{
+width: 8em;
+height: auto;
+margin-left: 4em;
+margin-top: 1em;
+
+}
