@@ -6,3 +6,98 @@ animation-duration: 0.2s;
   animation-fill-mode: forwards;
 
 }
+
+
+.red_ghost{
+height: 10em;
+width: auto;  
+animation-name: moveGhost;
+animation-duration: 5s;
+animation-iteration-count:infinite;
+transition-timing-function: ease-in;
+animation-direction: alternate;
+
+margin-top: 5.2em;
+margin-bottom: 4em;
+
+
+
+}
+
+
+.pumpkin{
+height: 15em;
+margin-top: 2em;
+display: block;
+margin-left: auto;
+margin-right: auto;
+animation-name: ChangeBackgroundColor;
+animation-duration: 3s;
+animation-iteration-count:infinite;
+transition-timing-function: linear;
+animation-direction: alternate-reverse;
+max-width: 100%;
+
+
+}
+
+.pumpkin:hover {
+animation-name: scaleBigger;
+animation-duration:1s;
+animation-fill-mode: forwards;
+
+}
+
+h1{
+color: component.$orange;
+font-size: 2.5em;
+animation-name: textShadow;
+animation-duration: 2s;
+animation-iteration-count:infinite;
+transition-timing-function: ease;
+animation-direction: alternate;
+  
+
+}
+
+
+@media screen and (max-width: 1200px){
+  
+@keyframes moveGhost{
+
+from {
+transform: translateX(1em);
+ opacity: 0;
+}
+
+
+to {
+transform: translateX(36em) scale(1.5);
+ opacity: 1;
+
+}
+
+}
+}
+
+
+
+
+@media screen and (max-width: 600px){
+  
+@keyframes moveGhost{
+
+from {
+transform: translateX(1em);
+ opacity: 0;
+}
+
+
+to {
+transform: translateX(17em) scale(1.5);
+ opacity: 1;
+
+}
+
+}
+}

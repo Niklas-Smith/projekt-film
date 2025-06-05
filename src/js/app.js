@@ -1,7 +1,7 @@
 "use strict"
 let omdbApi = []
 let tmdbApi = []
-
+let watchmodeApi = []
  
  window.onload = () => {
     
@@ -61,15 +61,15 @@ imgEl.id = moviePoster.imdbID
 imgEl.classList.add("posterImg")
 scrollEl.appendChild(imgEl)
 imgEl.addEventListener("click", getTmdbInfo )
-
+imgEl.addEventListener("click" , getWatchmodeInfo)
 })
 
 }
 
 
-async function getTmdbInfo(evemt)  {
+async function getTmdbInfo(event)  {
 
-let findMovie = evemt.target.id
+let findMovie = event.target.id
 
 try {
 
@@ -94,16 +94,52 @@ showMovieInfo()
 
 }
 
+
+async function getWatchmodeInfo(event)  {
+
+let findMovieWatchmode = event.target.id
+
+try {
+    
+const resp = await fetch (`https://api.watchmode.com/v1/title/${findMovieWatchmode}/sources/?apiKey=Bpd9IwBs5AkzbM2bATaDdYxNsADtlQpCfMQM9CTE`)
+
+if(!resp.ok) {
+ throw new error("Något blev fel...")
+    
+ }
+
+watchmodeApi = await resp.json();
+
+
+
+
+
+
+
+ }catch(error) {
+ console.error(error); }
+ 
+
+showMovieInfo()
+
+}
+
+
+
+
+
 function showMovieInfo() {
 let useTmdbApi = tmdbApi.movie_results
+let useWatchmodeApi = watchmodeApi.slice(0,1)
 
-console.log(useTmdbApi);
 
+console.log(useWatchmodeApi);
 let movieInfoEl = document.querySelector(".Show_movies");
 
 movieInfoEl.innerHTML = ""
 useTmdbApi.forEach(movie => {
 
+    
 let h2El = document.createElement("h2")
 let h3ElOverview = document.createElement("h3")
 let h3ElRelesedate = document.createElement("h3")
@@ -157,5 +193,24 @@ movieInfoEl.appendChild(voteParagrafEl)
 h3ElvoteNumber.appendChild(voteNumberEl) 
 voteParagrafEl.appendChild(paragrafVoteNumberEl)
 
+
 })
+
+useWatchmodeApi.forEach(watch => {
+
+let h3Wheretowatch = document.createElement("h3")
+let wheretowatchEl = document.createTextNode("Where to watch this!")
+let wheretowatchParagrafEl = document.createElement("p")
+let wheretowatchTextnode = document.createTextNode("you can watch this on "+ watch.name + " with a " +watch.type+ " plan in region " + watch.region)
+
+movieInfoEl.appendChild(h3Wheretowatch)
+h3Wheretowatch.appendChild(wheretowatchEl)
+movieInfoEl.appendChild(wheretowatchParagrafEl)
+wheretowatchParagrafEl.appendChild(wheretowatchTextnode)
+
+
+})
+
+
+
 }

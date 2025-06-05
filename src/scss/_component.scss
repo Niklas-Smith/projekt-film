@@ -31,3 +31,83 @@ transform: scale(1.1);
 }
 }
 
+@keyframes moveGhost{
+
+from {
+transform: translateX(1em);
+ opacity: 0;
+}
+
+
+to {
+transform: translateX(100em) scale(2);
+ opacity: 1;
+
+}
+}
+
+@keyframes ChangeBackgroundColor{
+
+0%{
+background-color: $orange;
+
+
+
+}
+25%{ 
+    background-color: $lightred;
+   
+
+}
+
+50%{
+background-color: $brown;  
+
+}
+
+75% {
+background-color: $lightred;
+}
+
+100% {
+
+    background-color: $orange;
+    
+ 
+}
+
+}
+
+
+@keyframes textShadow{
+
+from{
+
+ text-shadow: 1px 3px $lightred;
+}
+
+to{
+
+    
+  text-shadow: 8px 12px $brown;
+}
+
+
+}
+
+
+@keyframes scaleBigger{
+
+from{
+
+transform: scale(1);
+
+}
+to{
+
+    transform: scale(2);
+}
+
+
+}
+
