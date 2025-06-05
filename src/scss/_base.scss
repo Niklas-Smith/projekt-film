@@ -12,7 +12,8 @@ body{
 
   background-color: component.$backround_color;
   max-width: 1900px;
-  margin: auto;
+    margin: auto;
+
 }
 
 header {
@@ -27,11 +28,25 @@ h1{
 color: component.$orange;
 font-size: 2.5em;
 
-  text-shadow: 3px 2px component.$lightred;
+  text-shadow: 6px 10px component.$brown;
 
 }
 
+h2{
+@include  component.h2_h3_header(2.2em);
+}
 
+h3{
+@include  component.h2_h3_header(2em);
+
+}
+
+p {
+text-align: center;
+font-size: 1.5em;
+color: component.$paraColor;
+
+}
 
 .scroller{
 display: flex;

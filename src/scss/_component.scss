@@ -1,8 +1,19 @@
-$darkBrown: #421002;
+$darkBrown: #000000;
 $orange : #ff7700;
 $lightred : #D5451B;
+$brown :rgb(85, 22, 3);
 $backround_color : #F4E7E1;
 $font-Family: 'Georgia, 'Times New Roman', Times, serif';
+$paraColor: #271309;
+
+@mixin h2_h3_header ($font_size) {
+ color: $lightred;
+text-align: center;
+margin-top: 1em;
+font-size: $font_size;
+
+}
+
 
 
 @keyframes scaleImg{
