@@ -100,7 +100,7 @@ async function getWatchmodeInfo(event)  {
 let findMovieWatchmode = event.target.id
 
 try {
-    
+
 const resp = await fetch (`https://api.watchmode.com/v1/title/${findMovieWatchmode}/sources/?apiKey=Bpd9IwBs5AkzbM2bATaDdYxNsADtlQpCfMQM9CTE`)
 
 if(!resp.ok) {

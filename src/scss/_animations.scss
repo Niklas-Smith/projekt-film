@@ -6,6 +6,7 @@ animation-duration: 0.2s;
   animation-fill-mode: forwards;
 
 }
+/*When hover over posterImg use scaleimg animation with duration and fill-mode forwards   */
 
 
 .red_ghost{
@@ -16,14 +17,12 @@ animation-duration: 5s;
 animation-iteration-count:infinite;
 transition-timing-function: ease-in;
 animation-direction: alternate;
-
 margin-top: 5.2em;
 margin-bottom: 4em;
 
-
-
 }
-
+/*Usa animation moveGhost animation with duration. make it go on infinte, ease-in transtion-timing and alternate (first foward then backward) */
+/*Also give height,width and margins */
 
 .pumpkin{
 height: 15em;
@@ -37,9 +36,10 @@ animation-iteration-count:infinite;
 transition-timing-function: linear;
 animation-direction: alternate-reverse;
 max-width: 100%;
-
-
 }
+
+/*Usa animation ChangeBackgroundColor  animation with duration. make it go on infinte, linear transtion-timing and alternate-reverse (first backward then forward) */
+/*Also give height,max-width,display block and margins */
 
 .pumpkin:hover {
 animation-name: scaleBigger;
@@ -47,7 +47,7 @@ animation-duration:1s;
 animation-fill-mode: forwards;
 
 }
-
+/*When hover over pumpkin use scaleBigger animation with duration and fill-mode forwards   */
 h1{
 color: component.$orange;
 font-size: 2.5em;
@@ -59,6 +59,11 @@ animation-direction: alternate;
   
 
 }
+/*When hover over pumpkin use textShadow animation with duration. make it go on infinte, linear transtion-timing ease and alternate   */
+
+
+
+
 
 
 @media screen and (max-width: 1200px){
@@ -72,7 +77,7 @@ transform: translateX(1em);
 
 
 to {
-transform: translateX(36em) scale(1.5);
+transform: translateX(14em) scale(1.5);
  opacity: 1;
 
 }
@@ -80,24 +85,4 @@ transform: translateX(36em) scale(1.5);
 }
 }
 
-
-
-
-@media screen and (max-width: 600px){
-  
-@keyframes moveGhost{
-
-from {
-transform: translateX(1em);
- opacity: 0;
-}
-
-
-to {
-transform: translateX(17em) scale(1.5);
- opacity: 1;
-
-}
-
-}
-}
+/*Change keyframes moveGoest when below 1200px   */

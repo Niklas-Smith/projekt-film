@@ -4,18 +4,16 @@
    padding: 0;
   font-family: component.$font-Family;
   line-height: 1.5em;
-
-
 }
 
+/*Give all margin,padding and font-faily and line-height*/
 body{
-
   background-color: component.$backround_color;
-  max-width: 1900px;
-    margin: auto;
+   max-width: 1900px;
+   margin: auto;
 
 }
-
+/*Give body elements background-color max-width 1900px and margin auto*/
 
 header {
  background-color: component.$darkBrown;
@@ -25,58 +23,63 @@ justify-content: center ;
 padding-top: 1em;
 
 }
+
+/*Give header background-color, height,display flex and justify-content*/
+
 footer {
 
   @extend header;
 margin-top: 2em;
+padding-bottom: 5em;
 }
-.footer_para{
 
+/*get all from header and margi-top*/
+.footer_para{
 color: component.$orange;
 font-size: 1.5em;
-
-
-
 }
-/*
-h1{
-color: component.$orange;
-font-size: 2.5em;
 
-  text-shadow: 6px 10px component.$brown;
+/*Give footer_para color and font-size*/
 
-}
-*/
 h2{
 @include  component.h2_h3_header(2.2em);
 }
+
+/*Use mixing h2_h3_header and input font-size*/
 
 h3{
 @include  component.h2_h3_header(2em);
 
 }
 
+/*Use mixing h2_h3_header and input font-size*/
+
 p {
 text-align: center;
 font-size: 1.5em;
 color: component.$paraColor;
-
 }
+
+/*give p text-align center with color and font-size*/
 
 .scroller{
 display: flex;
 overflow-x: auto;
 
 }
-    
+
+  /*Display flex and overflow-x (make it so you can scroll movie posters Horizontally )*/
+
 .posterImg{
 padding: 1.5em;
 margin: 0.2em;
 background-color: component.$lightred;
 margin-top: 1em;
 cursor: pointer;
-
 }
+
+ /*Give padding,margin and backgroundcolor to posterimg also give cursor pointer.*/
+
 
 ul {
  
@@ -89,29 +92,23 @@ text-decoration:none;
 
   }
 }
-
 }
+ /* Nesting ul list-style-type none. Ul li a font-size and color with text-decoration none.*/
 
 nav a {
 
   text-decoration: none;
 }
 
+/*nav a remove text-dectration*/
 
-
-
-.credit{
-font-size: 1.5em;
-margin-top: 2em;
-margin-left: 2em;
-
-}
 
 .p_credit{
 
   font-size: 1.5em;
   margin-left: 2em;
 }
+/*p_credit font-size and margin-left*/
 
 .tmdb_log{
   display: block;
@@ -122,17 +119,18 @@ margin-left: auto;
 margin-right: auto;
 
 }
+/*Make tmdb_log display block. With marin, width and height*/
 
 .Show_movies{
 border: 4px component.$lightred solid ;
 margin-top: 2em;
-padding-bottom: 1em;
-
+margin-bottom: 1em;
 
 }
+/*Give .show_movies border,margin and padding*/
 
-#button_remove{
-width: 5em;
-height: 5em;
+.watch{
+font-size: 1em;
+color: component.$orange;
 
 }

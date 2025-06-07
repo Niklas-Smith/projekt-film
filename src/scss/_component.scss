@@ -6,6 +6,9 @@ $backround_color : #F4E7E1;
 $font-Family: 'Georgia, 'Times New Roman', Times, serif';
 $paraColor: #271309;
 
+/*Create seven variabe, six of them store color and one stor font-family */
+
+
 @mixin h2_h3_header ($font_size) {
  color: $lightred;
 text-align: center;
@@ -14,7 +17,7 @@ font-size: $font_size;
 
 }
 
-
+/*Mixing that store color, text-align and margin. also can input one argument for font-size*/
 
 @keyframes scaleImg{
 
@@ -30,6 +33,7 @@ transform: scale(1.1);
 
 }
 }
+/*Keyframe animation that make element bigger and reduce opacity*/
 
 @keyframes moveGhost{
 
@@ -45,6 +49,7 @@ transform: translateX(100em) scale(2);
 
 }
 }
+/*Keyframe animation that make element move right and increase opacity*/
 
 @keyframes ChangeBackgroundColor{
 
@@ -78,6 +83,8 @@ background-color: $lightred;
 
 }
 
+/*Keyframe animation that make element background color change a few times*/
+
 
 @keyframes textShadow{
 
@@ -95,6 +102,7 @@ to{
 
 }
 
+/*Keyframe animation that make the text-shadow move and change color*/
 
 @keyframes scaleBigger{
 
@@ -110,4 +118,4 @@ to{
 
 
 }
-
+/*Keyframe animation that make the element scale (bigger)*/
