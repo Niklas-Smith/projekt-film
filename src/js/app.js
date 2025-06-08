@@ -1,18 +1,47 @@
 "use strict"
+
+
+/**
+ *  Empty array that Store data from omdb api
+ * @type {Array}
+ */
 let omdbApi = []
+/**
+ *  Empty array that Store data from tmdb Api 
+ * @type {Array}
+ */
 let tmdbApi = []
+/**
+ *  Empty array that Store data from watchmode api 
+ * @type {Array}
+ */
 let watchmodeApi = []
  
+/**
+ * eventhandler that happens when the site is load
+ * Call function getomdbInfo
+ * @function getomdbInfo   
+ *
+ */
  window.onload = () => {
     
 getomdbInfo()
     }
 
-
+/**
+ * 
+ * this async function fetch data from omdbapi
+ * and put this data in empty array omdbAPi in json format
+ * @async
+ * @function getomdbInfo
+ * @throws {Error} if response not ok
+ * @returns {Promise} Data från api
+ * 
+*/
 async function getomdbInfo()  {
 try {
 
-const resp = await fetch ("http://www.omdbapi.com/?apikey=af2e962d&s=halloween&type=movie")
+const resp = await fetch ("https://www.omdbapi.com/?apikey=af2e962d&s=halloween&type=movie")
 
 
 if(!resp.ok) {
@@ -28,19 +57,18 @@ omdbApi = await resp.json();
  }catch(error) {
  console.error(error); }
  
-
-
- 
  
  omdbPrint()
 }
 
-
-
-
-
-
-
+/**
+ * 
+ * Function that use filter() to remove movie if imdbId = tt10682266
+ * also write out with help of forEach loop HTMLelement. 
+ * @function omdbPrint
+ * @returns {HTMLElement} Get back Img, Alt, Id and class and write to html code.
+ * @returns {event} two evenlistner that happend on click on images 
+ */
 function omdbPrint(){
 let movieImageEl = omdbApi
 
@@ -66,7 +94,15 @@ imgEl.addEventListener("click" , getWatchmodeInfo)
 
 }
 
-
+/**
+ *  * this async function fetch data from Tmdb
+ * and put this data in empty array tmdbApi in json format
+ * @async
+ * @function getomdbInfo
+ * @throws {Error} if response not ok
+ * @param {event} event this use target.id to get Imdb_id when click
+ * @returns {Promise} Data från api
+ */
 async function getTmdbInfo(event)  {
 
 let findMovie = event.target.id
@@ -95,6 +131,16 @@ showMovieInfo()
 }
 
 
+
+/**
+ *  * this async function fetch data from watchmode api
+ * and put this data in empty array watchmodeApi in json format
+ * @async
+ * @function getomdbInfo
+ * @throws {Error} if response not ok
+ * @param {event} event this use target.id to get Imdb_id when click
+ * @returns {Promise} Data från api
+ */
 async function getWatchmodeInfo(event)  {
 
 let findMovieWatchmode = event.target.id
@@ -128,6 +174,14 @@ showMovieInfo()
 
 
 
+/**
+ * 
+ * Function that use slice() to only get one value from api
+ * also write out with help of forEach loop
+ * HTMLelements and put in empty section
+ * @function showMovieInfo
+ * @returns {HTMLElement} H2,H3,Textnode,P and information from api.
+ */
 function showMovieInfo() {
 let useTmdbApi = tmdbApi.movie_results
 let useWatchmodeApi = watchmodeApi.slice(0,1)
@@ -165,7 +219,6 @@ let paragrafOverviewEl = document.createTextNode(movie.overview)
 let paragrafRelesedateEl = document.createTextNode(movie.release_date)
 let paragrafAverageEl = document.createTextNode(movie.vote_average)
 let paragrafVoteNumberEl = document.createTextNode(movie.vote_count)
-
 
 
 movieInfoEl.appendChild(h2El)

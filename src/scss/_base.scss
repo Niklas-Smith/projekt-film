@@ -30,7 +30,7 @@ footer {
 
   @extend header;
 margin-top: 2em;
-padding-bottom: 5em;
+padding-bottom: 7em;
 }
 
 /*get all from header and margi-top*/
@@ -134,3 +134,11 @@ font-size: 1em;
 color: component.$orange;
 
 }
+/*Give .watch font-size and color*/
+
+.jsdoc {
+@extend .watch;
+}
+
+/*Give .jsodc same as .watch */
+

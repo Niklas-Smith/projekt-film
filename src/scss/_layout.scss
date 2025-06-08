@@ -1,1 +1,14 @@
 @use "component";
+   @media (prefers-color-scheme: dark) {
+    body {
+ 
+    background-color: component.$backround_colordark50;
+
+    }
+
+p {
+color: component.$paraColorlight;
+
+}
+
+}

@@ -5,6 +5,8 @@ $brown :rgb(85, 22, 3);
 $backround_color : #F4E7E1;
 $font-Family: 'Georgia, 'Times New Roman', Times, serif';
 $paraColor: #271309;
+$backround_colordark50: darken($backround_color, 80%);
+$paraColorlight: lighten($paraColor,70%);
 
 /*Create seven variabe, six of them store color and one stor font-family */
 
