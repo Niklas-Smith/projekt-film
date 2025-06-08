@@ -74,9 +74,7 @@ let movieImageEl = omdbApi
 
 const filterMoviesImages = movieImageEl.Search.filter(movie => movie.imdbID !='tt10682266')
 
-console.log(movieImageEl.Search[0].Title );
 
-console.log(filterMoviesImages );
 
 let scrollEl = document.querySelector(".scroller");
 
