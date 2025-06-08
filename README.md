@@ -19,9 +19,7 @@ Sen lite information om mina kodpaket
 * Parcel har jag använt för att optimera min sida,göra liveservice och för att publicera på netlify (med uppdateringar)
 * Jsdoc har jag använt för kommentera min kod och för skapar en documantion som jag har lagt i min sidfot.
 
-Sedan har jag använt netlify för att lägga upp min hemsida här är en link
-[SmithSlasher](niklas-movies.netlify.app)
-
+Sedan har jag använt netlify för att lägga upp min hemsida.
 
 
 

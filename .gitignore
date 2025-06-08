@@ -3,5 +3,4 @@ package-lock.json
 dist/
 .parcel-cache/
 jsdoc.json
-docs/
 
